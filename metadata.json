@@ -1,0 +1,6 @@
+{
+  "name": "Islamic History Adventure",
+  "description": "An educational 3D cartoon-style gaming app by Visit Quran Online Academy designed to teach Islamic history and knowledge through interactive stories, mini-games, quizzes, and Ask Islam AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
