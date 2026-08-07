@@ -50,6 +50,16 @@ jobs:
           cd android
           ./gradlew assembleDebug --stacktrace
 
+      - name: Verify Debug APK Exists
+        run: |
+          if [ -f "android/app/build/outputs/apk/debug/app-debug.apk" ]; then
+            echo "✅ app-debug.apk found!"
+            ls -lh android/app/build/outputs/apk/debug/app-debug.apk
+          else
+            echo "❌ Error: app-debug.apk not found in android/app/build/outputs/apk/debug/"
+            exit 1
+          fi
+
       - name: Build Release APK (Unsigned)
         run: |
           cd android
@@ -60,6 +70,7 @@ jobs:
         with:
           name: ImanJourney-Debug-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
 
       - name: Upload Release APK Artifact (If Generated)
         uses: actions/upload-artifact@v4
