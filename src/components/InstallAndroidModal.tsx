@@ -82,7 +82,7 @@ export const InstallAndroidModal: React.FC<InstallAndroidModalProps> = ({
       title: 'Install Android App',
       subtitle: 'Fast 1-Click Installation for Android Devices',
       directInstallHeading: '1. One-Click Direct Android Installation',
-      directInstallDesc: 'Install "Islamic History Adventure" directly onto your Android phone or tablet like a native app with offline capabilities.',
+      directInstallDesc: 'Install "Iman Journey" directly onto your Android phone or tablet like a native app with offline capabilities.',
       installButton: '📱 Install App On Android Device',
       installedBadge: 'App Already Installed on Device',
       shareHeading: '2. Single Link Download & Distribution',

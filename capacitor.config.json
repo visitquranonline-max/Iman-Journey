@@ -1,6 +1,6 @@
 {
-  "appId": "com.visitquranonline.islamichistoryadventure",
-  "appName": "Islamic History Adventure",
+  "appId": "com.visitquranonline.imanjourney",
+  "appName": "Iman Journey - Islamic History Adventure",
   "webDir": "dist",
   "bundledWebRuntime": false,
   "server": {
@@ -20,3 +20,4 @@
     }
   }
 }
+
