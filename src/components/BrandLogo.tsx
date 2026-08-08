@@ -19,64 +19,72 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   }[size];
 
   const textSize = {
-    sm: 'text-sm',
-    md: 'text-base font-bold',
-    lg: 'text-xl font-extrabold',
-    xl: 'text-2xl font-black',
+    sm: 'text-sm font-bold',
+    md: 'text-base font-extrabold',
+    lg: 'text-2xl font-black',
+    xl: 'text-3xl font-black',
+  }[size];
+
+  const subtextSize = {
+    sm: 'text-[9px]',
+    md: 'text-[11px]',
+    lg: 'text-xs',
+    xl: 'text-sm',
   }[size];
 
   return (
     <div className="flex items-center gap-3 select-none">
-      <div className={`relative flex items-center justify-center ${dimensions}`}>
-        {/* Golden Mihrab Arch Outer Ring */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-[#f3b616] via-[#fcd34d] to-[#d97706] p-[2px] shadow-md shadow-amber-500/20 transition-transform duration-300 hover:scale-105">
-          <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center p-1 relative overflow-hidden">
-            {/* Subtle background golden glow */}
-            <div className="absolute -inset-1 bg-amber-50/50 rounded-full blur-xs" />
+      {/* Official Visit Quran Emblem */}
+      <div className={`relative flex items-center justify-center shrink-0 ${dimensions}`}>
+        <div className="w-full h-full rounded-2xl bg-gradient-to-b from-[#111827] via-[#090d16] to-[#020408] p-1.5 border border-amber-500/40 shadow-lg shadow-amber-500/10 flex items-center justify-center transition-transform duration-300 hover:scale-105">
+          <svg viewBox="0 0 512 512" className="w-full h-full drop-shadow-md">
+            <defs>
+              <linearGradient id="brandGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#fef08a" />
+                <stop offset="30%" stopColor="#f3b616" />
+                <stop offset="70%" stopColor="#eab308" />
+                <stop offset="100%" stopColor="#b45309" />
+              </linearGradient>
+            </defs>
 
-            {/* Official Mihrab Arch Design SVG */}
-            <svg viewBox="0 0 100 120" className="w-full h-full text-amber-500 fill-current relative z-10 drop-shadow-xs">
-              {/* Pointed Mihrab Arch Frame */}
+            <g transform="translate(0, -10)">
+              {/* Outer Pointed Mihrab Arch */}
               <path
-                d="M 50 10 
-                   C 75 25, 85 45, 85 70 
-                   L 85 105 
-                   L 15 105 
-                   L 15 70 
-                   C 15 45, 25 25, 50 10 Z"
+                d="M 256 60 C 370 120 410 190 410 320 L 410 420 L 102 420 L 102 320 C 102 190 142 120 256 60 Z"
                 fill="none"
-                stroke="#f3b616"
-                strokeWidth="6"
+                stroke="url(#brandGoldGrad)"
+                strokeWidth="20"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-              {/* Inner Arch Accent */}
+
+              {/* Inner Arch Accent Line */}
               <path
-                d="M 50 20 
-                   C 68 32, 75 50, 75 70 
-                   L 75 98 
-                   L 25 98 
-                   L 25 70 
-                   C 25 50, 32 32, 50 20 Z"
+                d="M 256 95 C 345 145 380 205 380 320 L 380 400 L 132 400 L 132 320 C 132 205 167 145 256 95 Z"
                 fill="none"
-                stroke="#111827"
-                strokeWidth="4"
+                stroke="url(#brandGoldGrad)"
+                strokeWidth="7"
+                opacity="0.75"
               />
 
-              {/* Open Quran Book in Center */}
-              <g transform="translate(25, 45) scale(0.5)" fill="#111827">
-                {/* Left Book Page */}
-                <path d="M 50 20 C 30 10, 10 20, 0 25 L 0 65 C 10 60, 30 50, 50 60 Z" />
-                {/* Right Book Page */}
-                <path d="M 50 20 C 70 10, 90 20, 100 25 L 100 65 C 90 60, 70 50, 50 60 Z" />
-                {/* Rehal Book Stand Base */}
-                <path d="M 20 62 L 80 82 M 80 62 L 20 82" stroke="#f3b616" strokeWidth="8" strokeLinecap="round" />
+              {/* Top Star/Crescent Peak */}
+              <path
+                d="M 256 30 L 260 45 L 275 45 L 263 54 L 267 69 L 256 60 L 245 69 L 249 54 L 237 45 L 252 45 Z"
+                fill="url(#brandGoldGrad)"
+              />
+
+              {/* Open Quran Book on Rehal */}
+              <g transform="translate(256, 260)">
+                <path d="M 0 -35 C -40 -50, -85 -35, -110 -25 L -110 35 C -85 25, -40 10, 0 25 Z" fill="url(#brandGoldGrad)" />
+                <path d="M 0 -35 C 40 -50, 85 -35, 110 -25 L 110 35 C 85 25, 40 10, 0 25 Z" fill="url(#brandGoldGrad)" />
+                <path d="M -5 -30 L -5 20 M 5 -30 L 5 20" stroke="#090d16" strokeWidth="5" strokeLinecap="round" />
+                <path d="M -70 25 L 70 85 M 70 25 L -70 85" stroke="url(#brandGoldGrad)" strokeWidth="16" strokeLinecap="round" />
               </g>
 
               {/* Location Pin Ring at Bottom */}
-              <ellipse cx="50" cy="112" rx="28" ry="6" fill="none" stroke="#f3b616" strokeWidth="4" />
-            </svg>
-          </div>
+              <ellipse cx="256" cy="440" rx="140" ry="16" fill="none" stroke="url(#brandGoldGrad)" strokeWidth="12" />
+            </g>
+          </svg>
         </div>
       </div>
 
@@ -91,7 +99,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         </span>
         {showSubtitle && (
           <span
-            className={`text-[11px] font-semibold tracking-widest uppercase ${
+            className={`font-semibold tracking-widest uppercase ${subtextSize} ${
               lightMode ? 'text-amber-200' : 'text-amber-700'
             }`}
           >

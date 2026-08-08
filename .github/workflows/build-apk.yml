@@ -38,7 +38,9 @@ jobs:
       - name: Add & Sync Capacitor Android Project
         run: |
           npx cap add android || true
+          node scripts/generate-android-icons.js
           npx cap sync android
+          node scripts/generate-android-icons.js
 
       - name: Grant Execute Permission for Gradle
         run: |

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Iman Journey - Islamic History Adventure</string>
+    <string name="title_activity_main">Iman Journey - Islamic History Adventure</string>
+    <string name="package_name">com.visitquranonline.imanjourney</string>
+    <string name="custom_url_scheme">com.visitquranonline.imanjourney</string>
+</resources>
